@@ -1,0 +1,8 @@
+ Small template engine that replaces variables via dictionary values::
+
+    line = "This is a {{variable}} in a {{string}}"
+
+    coima({'variable':'word', 'string':'sentence'}, line)
+
+    "This is a word in a sentence"
+
