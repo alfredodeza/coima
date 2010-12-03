@@ -7,6 +7,7 @@ class Coima(object):
         self.f = f
         self.cache = []
 
+
     def file_obj(self):
         try:
             obj = open(self.f).readlines()
@@ -16,18 +17,25 @@ class Coima(object):
         except OSError, error:
             print error
 
+
     def line_replacement(self):
         for line in self.file_obj():
-            print line
             items = [i for i in line.split()]
             for position, item in enumerate(items):
                 for i, part in enumerate(re.split(r'\{\{(.*?)\}\}', item)):
                     if i % 2:
                         replace = self.to_substitute.get(part)
-                        items[position] = replace 
-            self.cache.append(' '.join(items))
+                        if replace:
+                            items[position] = replace 
+            self.cache.append(items)
+            
 
-    def re_construct(self):
-        print ' '.join(self.cache)
+    def render(self):
+        self.line_replacement()
+        for i in self.cache:
+            if len(i) > 0:
+                print ' '.join(i)
+            else:
+                print ''
 
 
