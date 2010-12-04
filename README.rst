@@ -1,6 +1,3 @@
-pip install coima
------------------
-
 Small, easy and dumb
 --------------------
 
@@ -31,17 +28,7 @@ valid variables:
 
 Invalid variables are left 'as is' and left in the final rendered template.
 
+pip install coima
+-----------------
 
 
-
- Small template engine that replaces variables via dictionary values::
-
-    cat file.txt
-    "This is a {{variable}} in a {{string}}"
-
-    from coima import Template
-    Template({'variable':'word', 'string':'sentence'}, 'file.txt')
-
-    Template.render()
-
-    "This is a word in a sentence"
