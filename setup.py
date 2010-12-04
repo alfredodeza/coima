@@ -24,9 +24,9 @@ setup(
     "This is a {{variable}} in a {{string}}"
 
     from coima import Template
-    Template({'variable':'word', 'string':'sentence'}, 'file.txt')
+    t = Template({'variable':'word', 'string':'sentence'}, 'file.txt')
 
-    Template.render()
+    t.render()
 
     "This is a word in a sentence"
 
