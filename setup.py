@@ -20,11 +20,28 @@ setup(
     long_description = """\
  Small template engine that replaces variables via dictionary values::
 
-    line = "This is a {{variable}} in a {{string}}"
+    cat file.txt
+    "This is a {{variable}} in a {{string}}"
 
-    coima({'variable':'word', 'string':'sentence'}, line)
+    from coima import Coima
+    Coima({'variable':'word', 'string':'sentence'}, 'file.txt')
+
+    coima.render()
 
     "This is a word in a sentence"
+
+Syntax
+-------
+No Python or code blocks are allowed, this is basically a **dumb** templating 
+engine.
+
+Variables should be a one word or 2 words together with an underscore. These are
+valid variables:
+
+{{variable}}
+{{variable_one}}
+
+Invalid variables are left 'as is' and left in the final rendered template.
 
  """,
 
