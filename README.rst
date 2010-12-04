@@ -1,8 +1,10 @@
 pip install coima
 -----------------
 
+Small, easy and dumb
+--------------------
 
- Small template engine that replaces variables via dictionary values::
+Small template engine that replaces variables via dictionary values::
 
     cat file.txt
     "This is a {{variable}} in a {{string}}"
