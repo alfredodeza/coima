@@ -28,7 +28,12 @@ valid variables:
 
 Invalid variables are left 'as is' and left in the final rendered template.
 
-pip install coima
------------------
+Installation
+--------------
+You pick::
+
+    pip install coima 
+
+    easy_install coima
 
 
