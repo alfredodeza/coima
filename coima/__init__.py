@@ -1,3 +1,4 @@
+import sys
 import re
 
 class Template(object):
@@ -34,7 +35,8 @@ class Template(object):
         self.line_replacement()
         for i in self.cache:
             if len(i) > 0:
-                print ' '.join(i)
+                to_str = unicode(' '.join(i))
+                sys.stdout.write(to_str+'\n')
             else:
-                print ''
+                sys.stdout.write('\n')
 
