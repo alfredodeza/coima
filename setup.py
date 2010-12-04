@@ -1,13 +1,13 @@
 import distribute_setup
 distribute_setup.use_setuptools()
-from setuptools import setup
+from setuptools import setup, find_packages
 
 tests_require = ['pytest']
 
 setup(
     name = "coima",
     version = "0.0.1",
-    packages = ['coima'],
+    packages = find_packages(),
     include_package_data=True,
     package_data = {
         '': ['distribute_setup.py'],
@@ -23,10 +23,10 @@ setup(
     cat file.txt
     "This is a {{variable}} in a {{string}}"
 
-    from coima import Coima
-    Coima({'variable':'word', 'string':'sentence'}, 'file.txt')
+    from coima import Template
+    Template({'variable':'word', 'string':'sentence'}, 'file.txt')
 
-    coima.render()
+    Template.render()
 
     "This is a word in a sentence"
 

@@ -1,6 +1,6 @@
 import re
 
-class Coima(object):
+class Template(object):
 
     def __init__(self, to_substitute, f):
         self.to_substitute = to_substitute
@@ -37,5 +37,4 @@ class Coima(object):
                 print ' '.join(i)
             else:
                 print ''
-
 
