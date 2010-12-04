@@ -1,3 +1,7 @@
+pip install coima
+-----------------
+
+
  Small template engine that replaces variables via dictionary values::
 
     cat file.txt
@@ -9,6 +13,8 @@
     t.render()
 
     "This is a word in a sentence"
+
+
 
 Syntax
 -------
