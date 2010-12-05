@@ -17,4 +17,3 @@ class TestCoima(TestCase):
         expected = '# Simple Configuration File for Testing\n#\nport = {{port}}\nhost = {{host}}\n\n\n'
         self.assertEqual(result, expected)
 
-

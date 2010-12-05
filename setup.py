@@ -6,7 +6,7 @@ tests_require = ['pytest']
 
 setup(
     name = "coima",
-    version = "0.0.1",
+    version = "0.0.2",
     packages = find_packages(),
     include_package_data=True,
     package_data = {
@@ -28,7 +28,7 @@ setup(
 
     t.render()
 
-    "This is a word in a sentence"
+    u"This is a word in a sentence"
 
 Syntax
 -------

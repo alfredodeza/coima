@@ -11,7 +11,7 @@ Small template engine that replaces variables via dictionary values::
 
     t.render()
 
-    "This is a word in a sentence"
+    u"This is a word in a sentence"
 
 
 
