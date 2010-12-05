@@ -28,15 +28,9 @@ class Template(object):
                         replace = self.to_substitute.get(part)
                         if replace:
                             items[position] = replace 
-            self.cache.append(items)
-            
+            self.cache.append(' '.join(items))
+
 
     def render(self):
         self.line_replacement()
-        for i in self.cache:
-            if len(i) > 0:
-                to_str = unicode(' '.join(i))
-                sys.stdout.write(to_str+'\n')
-            else:
-                sys.stdout.write('\n')
-
+        return '\n'.join(self.cache)
